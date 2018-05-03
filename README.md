@@ -5,5 +5,11 @@ NodeMCU with a DC-DC power converter to allow it to be powered by up to 25VDC an
 ### Tutorial
 We've put together a brief tutorial on [instructables](https://www.instructables.com/id/NodeMCU-Relay-Controlled-Solenoid-Valve/) for how to setup the device.
 
+### Libaries
+
+The arduino source code relies on the following libraries
+* readiness.io (coming soon)
+* [ticker](https://github.com/esp8266/Arduino/tree/master/libraries/Ticker)
+
 ### Basic Wiring Diagram
 ![Image or Wiring Diagram](https://github.com/UNSWmir/NodeMCU-RelayUnit/blob/master/RelayUnit_bb.png)
