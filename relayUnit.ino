@@ -15,14 +15,12 @@ Ticker timer;
 
 
 void button1Interrupt() {
-  digitalWrite(LED_PIN, HIGH);
-  digitalWrite(SOLENOID_PIN, HIGH);
+// Interrupt for button 1 action - not used at the moment
 
 }
 
 void button2Interrupt() {
-  digitalWrite(LED_PIN, LOW);
-  digitalWrite(SOLENOID_PIN, LOW);
+// Interrupt for button 2 action - not used at the moment
 }
 
 /* Interrupt timer for collecting data to the Readiness.io server */
@@ -46,11 +44,13 @@ void setup() {
   Serial.println(WIFI_SSID);
   client.wifiConnection(WIFI_SSID, WIFI_PASS);
 
-
+  /*  Interupt attchments for the two  buttons/switchs which is currently disabled.
   pinMode(INTERRUPT1_PIN, INPUT);
   pinMode(INTERRUPT2_PIN, INPUT);
   attachInterrupt(digitalPinToInterrupt(INTERRUPT2_PIN), button2Interrupt, RISING);  // Attach the interrupt.
   attachInterrupt(digitalPinToInterrupt(INTERRUPT1_PIN), button1Interrupt, RISING);  // Attach the interrupt.
+  */
+  
   timer.attach(UPDATE_RATE, readFromServer);
   client.testConnection();
 }
